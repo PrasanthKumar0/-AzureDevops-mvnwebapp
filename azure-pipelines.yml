@@ -15,9 +15,9 @@ variables:
 jobs:
 - job: DeployToTomcat
   steps:
-  - task: UseJavaVersion@1
+  - task: JDKInstaller@1
     inputs:
-      versionSpec: '21.0.1'
+      versionSpec: '11'  # or '21.0.1' if your project specifically requires this version
       addToPath: true
       setAsDefault: true
 
